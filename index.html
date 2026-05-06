@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LogixOps Control Tower</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Primary navigation">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">LX</span>
+        <div>
+          <strong>LogixOps</strong>
+          <span>Control Tower</span>
+        </div>
+      </div>
+
+      <nav class="nav-list">
+        <a class="nav-item is-active" href="#dashboard" aria-current="page">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 13h6V4H4v9Zm0 7h6v-5H4v5Zm10 0h6v-9h-6v9Zm0-16v5h6V4h-6Z"/></svg>
+          </span>
+          Dashboard
+        </a>
+        <a class="nav-item" href="#shipment-board">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16v3H4V5Zm0 5h16v3H4v-3Zm0 5h10v3H4v-3Zm12.8 4.5 4.7-4.7-1.4-1.4-3.3 3.3-1.5-1.5-1.4 1.4 2.9 2.9Z"/></svg>
+          </span>
+          Shipments
+        </a>
+        <a class="nav-item" href="#fleet-assets">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M3 7h11v10H3V7Zm13 3h2.7L21 13.4V17h-5v-7ZM6.5 20a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Zm11 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/></svg>
+          </span>
+          Fleet
+        </a>
+        <a class="nav-item" href="#exception-queue">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 3h14v18H5V3Zm3 4h8V5H8v2Zm0 4h8V9H8v2Zm0 4h5v-2H8v2Zm0 4h8v-2H8v2Z"/></svg>
+          </span>
+          Exceptions
+        </a>
+        <a class="nav-item" href="#driver-mobile">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M7 2h10a2 2 0 0 1 2 2v16a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2Zm0 4h10V4H7v2Zm0 2v10h10V8H7Zm3 12h4v-1h-4v1Z"/></svg>
+          </span>
+          Driver
+        </a>
+        <a class="nav-item" href="#billing-center">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 3h14v18l-2-1.2-2 1.2-2-1.2-2 1.2-2-1.2L5 21V3Zm3 5h8V6H8v2Zm0 4h8v-2H8v2Zm0 4h5v-2H8v2Z"/></svg>
+          </span>
+          Billing
+        </a>
+        <a class="nav-item" href="#customer-portal">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-8 9a8 8 0 1 1 16 0H4Z"/></svg>
+          </span>
+          Portal
+        </a>
+        <a class="nav-item" href="#ml-studio">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 17h3V7H4v10Zm5 0h3V3H9v14Zm5 0h3v-6h-3v6Zm5 0h3V9h-3v8ZM3 19h18v2H3v-2Z"/></svg>
+          </span>
+          ML Studio
+        </a>
+        <a class="nav-item" href="#ai-dispatch">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2 9.8 8.2 3 10.5l6.8 2.3L12 19l2.2-6.2 6.8-2.3-6.8-2.3L12 2Zm-7 14 1.1 3.1L9 20l-2.9.9L5 24l-1.1-3.1L1 20l2.9-.9L5 16Zm14-1 1.4 3.6L24 20l-3.6 1.4L19 25l-1.4-3.6L14 20l3.6-1.4L19 15Z"/></svg>
+          </span>
+          AI Dispatch
+        </a>
+        <a class="nav-item" href="#project-delivery">
+          <span class="icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M5 4h14v2H5V4Zm0 7h14v2H5v-2Zm0 7h9v2H5v-2Zm12.5-2.5 4 4-1.5 1.5-2.5-2.5-2.5 2.5L13.5 20l4-4Z"/></svg>
+          </span>
+          Projects
+        </a>
+      </nav>
+
+      <div class="sidebar-note">
+        <span>Workspace</span>
+        <strong>India regional ops</strong>
+      </div>
+    </aside>
+
+    <main id="dashboard" class="main-content">
+      <header class="topbar">
+        <div>
+          <p class="eyebrow">Operations</p>
+          <h1>Logistics Control Tower</h1>
+        </div>
+        <div class="topbar-actions">
+          <label class="search-control" for="shipment-search">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M9.5 4a5.5 5.5 0 0 1 4.4 8.8l4.7 4.6-1.4 1.5-4.7-4.7A5.5 5.5 0 1 1 9.5 4Zm0 2a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Z"/></svg>
+            </span>
+            <input id="shipment-search" type="search" placeholder="Search shipment, city, customer">
+          </label>
+          <button id="export-csv" class="icon-button" type="button" aria-label="Export shipments" title="Export shipments">
+            <svg viewBox="0 0 24 24"><path d="M12 3v10.2l3.7-3.7 1.4 1.4-6.1 6.1-6.1-6.1 1.4-1.4 3.7 3.7V3h2Zm-7 16h14v2H5v-2Z"/></svg>
+          </button>
+          <button id="reset-data" class="icon-button" type="button" aria-label="Reset sample data" title="Reset sample data">
+            <svg viewBox="0 0 24 24"><path d="M12 5a7 7 0 1 1-6.3 4H3.5a9 9 0 1 0 2.4-3.2L3 3v7h7L7.4 7.4A6.9 6.9 0 0 1 12 5Z"/></svg>
+          </button>
+          <button id="open-shipment-dialog" class="primary-button" type="button">
+            <span class="icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24"><path d="M11 5h2v6h6v2h-6v6h-2v-6H5v-2h6V5Z"/></svg>
+            </span>
+            New Shipment
+          </button>
+        </div>
+      </header>
+
+      <section class="kpi-grid" aria-label="Operations summary">
+        <article class="kpi-card">
+          <span>Active shipments</span>
+          <strong id="kpi-active">0</strong>
+          <small id="kpi-active-detail">0 high priority</small>
+        </article>
+        <article class="kpi-card">
+          <span>Delayed loads</span>
+          <strong id="kpi-delayed">0</strong>
+          <small id="kpi-delay-detail">0 need action</small>
+        </article>
+        <article class="kpi-card">
+          <span>Fleet utilization</span>
+          <strong id="kpi-utilization">0%</strong>
+          <small id="kpi-fleet-detail">0 vehicles online</small>
+        </article>
+        <article class="kpi-card">
+          <span>On-time rate</span>
+          <strong id="kpi-ontime">0%</strong>
+          <small id="kpi-ontime-detail">Last 7 days</small>
+        </article>
+      </section>
+
+      <section class="workspace-grid">
+        <div id="shipment-board" class="panel shipment-panel">
+          <div class="panel-header">
+            <div>
+              <p class="eyebrow">Shipments</p>
+              <h2>Load Board</h2>
+            </div>
+            <div id="status-filters" class="segmented-control" aria-label="Filter shipments"></div>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Shipment</th>
+                  <th>Lane</th>
+                  <th>ETA</th>
+                  <th>Status</th>
+                  <th>Vehicle</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="shipment-table"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <aside id="route-panel" class="panel route-panel" aria-label="Selected shipment details">
+          <div class="panel-header compact">
+            <div>
+              <p class="eyebrow">Plan</p>
+              <h2 id="route-title">Select a shipment</h2>
+            </div>
+            <span id="route-status" class="status-pill neutral">Ready</span>
+          </div>
+          <div id="route-map" class="route-map"></div>
+          <dl class="detail-grid">
+            <div>
+              <dt>Customer</dt>
+              <dd id="detail-customer">-</dd>
+            </div>
+            <div>
+              <dt>Driver</dt>
+              <dd id="detail-driver">-</dd>
+            </div>
+            <div>
+              <dt>Weight</dt>
+              <dd id="detail-weight">-</dd>
+            </div>
+            <div>
+              <dt>Revenue</dt>
+              <dd id="detail-revenue">-</dd>
+            </div>
+            <div>
+              <dt>Distance</dt>
+              <dd id="detail-distance">-</dd>
+            </div>
+            <div>
+              <dt>ML ETA</dt>
+              <dd id="detail-ml-eta">-</dd>
+            </div>
+          </dl>
+          <ol id="tracking-list" class="tracking-list"></ol>
+        </aside>
+
+        <div id="fleet-assets" class="panel fleet-panel">
+          <div class="panel-header compact">
+            <div>
+              <p class="eyebrow">Fleet</p>
+              <h2>Asset Availability</h2>
+            </div>
+          </div>
+          <div id="fleet-list" class="fleet-list"></div>
+        </div>
+
+        <div id="exception-queue" class="panel alerts-panel">
+          <div class="panel-header compact">
+            <div>
+              <p class="eyebrow">Exceptions</p>
+              <h2>Action Queue</h2>
+            </div>
+          </div>
+          <div id="alerts-list" class="alerts-list"></div>
+        </div>
+
+        <div id="driver-mobile" class="panel driver-panel">
+          <div class="panel-header compact">
+            <div>
+              <p class="eyebrow">Driver</p>
+              <h2>Mobile Workflow</h2>
+            </div>
+            <span id="driver-status" class="status-pill neutral">Ready</span>
+          </div>
+          <div class="workflow-body">
+            <div class="workflow-card">
+              <strong id="driver-shipment">Select a shipment</strong>
+              <span id="driver-copy">Pickup, POD, and incident updates write back to the database.</span>
+            </div>
+            <div class="workflow-actions">
+              <button id="driver-pickup" class="secondary-button" type="button">Confirm Pickup</button>
+              <label>
+                Receiver
+                <input id="pod-receiver" placeholder="Receiver name">
+              </label>
+              <button id="driver-pod" class="primary-button" type="button">Capture POD</button>
+              <label class="full-span">
+                Incident
+                <textarea id="incident-issue" rows="3" placeholder="Delay reason, damage note, route block, etc."></textarea>
+              </label>
+              <button id="driver-incident" class="secondary-button" type="button">Report Incident</button>
+            </div>
+          </div>
+        </div>
+
+        <div id="billing-center" class="panel billing-panel">
+          <div class="panel-header compact">
+            <div>
+              <p class="eyebrow">Finance</p>
+              <h2>Billing & Notifications</h2>
+            </div>
+            <button id="send-notification" class="secondary-button" type="button">Notify Customer</button>
+          </div>
+          <div class="split-list">
+            <div>
+              <h3>Invoices</h3>
+              <div id="invoice-list" class="stack-list"></div>
+            </div>
+            <div>
+              <h3>Notifications</h3>
+              <div id="notification-list" class="stack-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="customer-portal" class="panel customer-panel">
+          <div class="panel-header compact">
+            <div>
+              <p class="eyebrow">Customer</p>
+              <h2>Portal View</h2>
+            </div>
+            <select id="portal-customer-select" class="status-select" aria-label="Portal customer"></select>
+          </div>
+          <div id="portal-summary" class="portal-summary"></div>
+        </div>
+
+        <div id="ml-studio" class="panel ml-panel">
+          <div class="panel-header compact">
+            <div>
+              <p class="eyebrow">Machine Learning</p>
+              <h2>Prediction Studio</h2>
+            </div>
+            <button id="run-ml-prediction" class="primary-button" type="button">Predict Selected Load</button>
+          </div>
+          <div class="ml-grid">
+            <div class="ml-card">
+              <h3>Delivery Time</h3>
+              <div id="ml-prediction" class="ai-output">Loading model...</div>
+            </div>
+            <div class="ml-card">
+              <h3>Demand Prediction</h3>
+              <div id="demand-forecast" class="stack-list"></div>
+            </div>
+            <div class="ml-card">
+              <h3>Fraud & Anomaly</h3>
+              <div id="anomaly-list" class="stack-list"></div>
+            </div>
+            <div class="ml-card">
+              <h3>Warehouse Optimization</h3>
+              <div id="warehouse-suggestions" class="stack-list"></div>
+            </div>
+          </div>
+        </div>
+
+        <div id="ai-dispatch" class="panel ai-panel">
+          <div class="panel-header compact">
+            <div>
+              <p class="eyebrow">Mistral</p>
+              <h2>AI Dispatch Copilot</h2>
+            </div>
+            <button id="generate-ai-plan" class="primary-button" type="button">
+              <span class="icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M13 2 4 14h7l-1 8 10-13h-7l1-7Z"/></svg>
+              </span>
+              Generate Plan
+            </button>
+          </div>
+          <div class="ai-body">
+            <label class="ai-prompt" for="ai-prompt">
+              Dispatcher prompt
+              <textarea id="ai-prompt" rows="4">Prioritize delayed and critical shipments, recommend dispatcher actions for the next 2 hours, and flag customer updates needed.</textarea>
+            </label>
+            <div class="ai-result">
+              <div class="ai-result-header">
+                <strong>Mistral response</strong>
+                <span id="ai-status" class="status-pill neutral">Ready</span>
+              </div>
+              <div id="ai-output" class="ai-output">Generate a plan after starting the server with a Mistral API key.</div>
+            </div>
+          </div>
+        </div>
+
+        <div id="project-delivery" class="panel project-panel">
+          <div class="panel-header compact">
+            <div>
+              <p class="eyebrow">Services</p>
+              <h2>Project Delivery Tracker</h2>
+            </div>
+          </div>
+          <div class="project-grid">
+            <div>
+              <h3>Project Completion</h3>
+              <div id="project-progress-list" class="stack-list"></div>
+            </div>
+            <div>
+              <h3>Team Schedule</h3>
+              <div id="team-schedule-list" class="stack-list"></div>
+            </div>
+            <div>
+              <h3>Travel Tickets</h3>
+              <div id="travel-ticket-list" class="stack-list"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="shipment-dialog" class="shipment-dialog">
+    <form id="shipment-form" method="dialog">
+      <div class="dialog-header">
+        <div>
+          <p class="eyebrow">Create</p>
+          <h2>New Shipment</h2>
+        </div>
+        <button class="icon-button" type="button" id="close-dialog" aria-label="Close">
+          <svg viewBox="0 0 24 24"><path d="m6.4 5 12.6 12.6-1.4 1.4L5 6.4 6.4 5Zm12.6 1.4L6.4 19 5 17.6 17.6 5 19 6.4Z"/></svg>
+        </button>
+      </div>
+
+      <div class="form-grid">
+        <label>
+          Customer
+          <input name="customer" required placeholder="Acme Retail">
+        </label>
+        <label>
+          Origin
+          <input name="origin" required placeholder="Mumbai">
+        </label>
+        <label>
+          Destination
+          <input name="destination" required placeholder="Pune">
+        </label>
+        <label>
+          ETA
+          <input name="eta" type="datetime-local" required>
+        </label>
+        <label>
+          Vehicle
+          <select name="vehicle" id="vehicle-select" required></select>
+        </label>
+        <label>
+          Priority
+          <select name="priority" required>
+            <option>Normal</option>
+            <option>High</option>
+            <option>Critical</option>
+          </select>
+        </label>
+        <label>
+          Weight (kg)
+          <input name="weight" type="number" min="1" step="1" required placeholder="1200">
+        </label>
+        <label>
+          Revenue
+          <input name="revenue" type="number" min="0" step="100" required placeholder="42000">
+        </label>
+      </div>
+
+      <div class="dialog-actions">
+        <button class="secondary-button" type="button" id="cancel-dialog">Cancel</button>
+        <button class="primary-button" type="submit">Create Shipment</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="app.js" defer></script>
+</body>
+</html>

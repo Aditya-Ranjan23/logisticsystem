@@ -1,0 +1,911 @@
+{
+  "meta": {
+    "version": 2,
+    "seededAt": "2026-05-05T16:25:33.190Z",
+    "storage": "json-file-database"
+  },
+  "customers": [
+    {
+      "id": "CUST-001",
+      "companyName": "FreshCart Foods",
+      "contactName": "Isha",
+      "email": "ops1@example.com",
+      "phone": "+91-90000-1001",
+      "tier": "Enterprise"
+    },
+    {
+      "id": "CUST-002",
+      "companyName": "Northstar Pharma",
+      "contactName": "Dev",
+      "email": "ops2@example.com",
+      "phone": "+91-90000-1002",
+      "tier": "Enterprise"
+    },
+    {
+      "id": "CUST-003",
+      "companyName": "UrbanBuild Supply",
+      "contactName": "Riya",
+      "email": "ops3@example.com",
+      "phone": "+91-90000-1003",
+      "tier": "Standard"
+    },
+    {
+      "id": "CUST-004",
+      "companyName": "MetroStyle Retail",
+      "contactName": "Samar",
+      "email": "ops4@example.com",
+      "phone": "+91-90000-1004",
+      "tier": "Standard"
+    },
+    {
+      "id": "CUST-005",
+      "companyName": "Coastal Electronics",
+      "contactName": "Anika",
+      "email": "ops5@example.com",
+      "phone": "+91-90000-1005",
+      "tier": "Standard"
+    },
+    {
+      "id": "CUST-006",
+      "companyName": "BluePeak Auto",
+      "contactName": "Yash",
+      "email": "ops6@example.com",
+      "phone": "+91-90000-1006",
+      "tier": "Standard"
+    },
+    {
+      "id": "CUST-007",
+      "companyName": "QuickBasket",
+      "contactName": "Tara",
+      "email": "ops7@example.com",
+      "phone": "+91-90000-1007",
+      "tier": "Standard"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "MH12-LX-9041",
+      "type": "32 ft container",
+      "driver": "Aarav Patel",
+      "capacityKg": 16000,
+      "utilization": 82,
+      "location": "Mumbai Hub",
+      "status": "In Transit"
+    },
+    {
+      "id": "KA03-LX-1882",
+      "type": "Reefer truck",
+      "driver": "Meera Rao",
+      "capacityKg": 9000,
+      "utilization": 64,
+      "location": "Bengaluru DC",
+      "status": "Available"
+    },
+    {
+      "id": "DL01-LX-7710",
+      "type": "20 ft container",
+      "driver": "Kabir Khan",
+      "capacityKg": 11000,
+      "utilization": 91,
+      "location": "Delhi Hub",
+      "status": "In Transit"
+    },
+    {
+      "id": "TN09-LX-5528",
+      "type": "Open body",
+      "driver": "Nila Suresh",
+      "capacityKg": 7500,
+      "utilization": 38,
+      "location": "Chennai Yard",
+      "status": "Maintenance"
+    },
+    {
+      "id": "GJ05-LX-4409",
+      "type": "Mini truck",
+      "driver": "Rohan Shah",
+      "capacityKg": 4200,
+      "utilization": 52,
+      "location": "Ahmedabad Hub",
+      "status": "Available"
+    }
+  ],
+  "shipments": [
+    {
+      "id": "SHP-2605-001",
+      "customerId": "CUST-001",
+      "customer": "FreshCart Foods",
+      "origin": "Mumbai",
+      "destination": "Pune",
+      "status": "In Transit",
+      "priority": "High",
+      "eta": "2026-05-05T16:36",
+      "vehicleId": "MH12-LX-9041",
+      "weightKg": 12400,
+      "volumeCbm": 36.5,
+      "revenue": 48500,
+      "progress": 58,
+      "distanceKm": 142,
+      "route": {
+        "available": true,
+        "origin": {
+          "city": "Mumbai",
+          "lat": 19.076,
+          "lng": 72.8777,
+          "region": "West"
+        },
+        "destination": {
+          "city": "Pune",
+          "lat": 18.5204,
+          "lng": 73.8567,
+          "region": "West"
+        },
+        "stops": [],
+        "distanceKm": 142,
+        "durationHours": 7.6,
+        "eta": "2026-05-05T16:36",
+        "trafficIndex": 1,
+        "vehicleType": "32 ft container",
+        "routeSequence": [
+          "Mumbai",
+          "Pune"
+        ]
+      },
+      "createdAt": "2026-05-05T09:00:00.000Z",
+      "checkpoints": [
+        {
+          "label": "Booked Mumbai to Pune",
+          "time": "2026-05-05 09:00"
+        },
+        {
+          "label": "Status: In Transit",
+          "time": "2026-05-05 10:00"
+        }
+      ]
+    },
+    {
+      "id": "SHP-2605-002",
+      "customerId": "CUST-002",
+      "customer": "Northstar Pharma",
+      "origin": "Bengaluru",
+      "destination": "Hyderabad",
+      "status": "Dispatched",
+      "priority": "Critical",
+      "eta": "2026-05-05T23:54",
+      "vehicleId": "KA03-LX-1882",
+      "weightKg": 4200,
+      "volumeCbm": 12.4,
+      "revenue": 72000,
+      "progress": 24,
+      "distanceKm": 590,
+      "route": {
+        "available": true,
+        "origin": {
+          "city": "Bengaluru",
+          "lat": 12.9716,
+          "lng": 77.5946,
+          "region": "South"
+        },
+        "destination": {
+          "city": "Hyderabad",
+          "lat": 17.385,
+          "lng": 78.4867,
+          "region": "South"
+        },
+        "stops": [],
+        "distanceKm": 590,
+        "durationHours": 12.9,
+        "eta": "2026-05-05T23:54",
+        "trafficIndex": 1,
+        "vehicleType": "32 ft container",
+        "routeSequence": [
+          "Bengaluru",
+          "Hyderabad"
+        ]
+      },
+      "createdAt": "2026-05-05T11:00:00.000Z",
+      "checkpoints": [
+        {
+          "label": "Booked Bengaluru to Hyderabad",
+          "time": "2026-05-05 11:00"
+        },
+        {
+          "label": "Status: Dispatched",
+          "time": "2026-05-05 12:00"
+        }
+      ]
+    },
+    {
+      "id": "SHP-2605-003",
+      "customerId": "CUST-003",
+      "customer": "UrbanBuild Supply",
+      "origin": "Delhi",
+      "destination": "Jaipur",
+      "status": "Delayed",
+      "priority": "High",
+      "eta": "2026-05-05T15:18",
+      "vehicleId": "DL01-LX-7710",
+      "weightKg": 9800,
+      "volumeCbm": 28.8,
+      "revenue": 39100,
+      "progress": 71,
+      "distanceKm": 278,
+      "route": {
+        "available": true,
+        "origin": {
+          "city": "Delhi",
+          "lat": 28.6139,
+          "lng": 77.209,
+          "region": "North"
+        },
+        "destination": {
+          "city": "Jaipur",
+          "lat": 26.9124,
+          "lng": 75.7873,
+          "region": "North"
+        },
+        "stops": [],
+        "distanceKm": 278,
+        "durationHours": 10.3,
+        "eta": "2026-05-05T15:18",
+        "trafficIndex": 1.18,
+        "vehicleType": "32 ft container",
+        "routeSequence": [
+          "Delhi",
+          "Jaipur"
+        ]
+      },
+      "createdAt": "2026-05-05T05:00:00.000Z",
+      "checkpoints": [
+        {
+          "label": "Booked Delhi to Jaipur",
+          "time": "2026-05-05 05:00"
+        },
+        {
+          "label": "Status: Delayed",
+          "time": "2026-05-05 06:00"
+        }
+      ]
+    },
+    {
+      "id": "SHP-2605-004",
+      "customerId": "CUST-004",
+      "customer": "MetroStyle Retail",
+      "origin": "Chennai",
+      "destination": "Coimbatore",
+      "status": "Booked",
+      "priority": "Normal",
+      "eta": "2026-05-06T04:42",
+      "vehicleId": "TN09-LX-5528",
+      "weightKg": 6100,
+      "volumeCbm": 17.9,
+      "revenue": 27600,
+      "progress": 8,
+      "distanceKm": 504,
+      "route": {
+        "available": true,
+        "origin": {
+          "city": "Chennai",
+          "lat": 13.0827,
+          "lng": 80.2707,
+          "region": "South"
+        },
+        "destination": {
+          "city": "Coimbatore",
+          "lat": 11.0168,
+          "lng": 76.9558,
+          "region": "South"
+        },
+        "stops": [],
+        "distanceKm": 504,
+        "durationHours": 14.7,
+        "eta": "2026-05-06T04:42",
+        "trafficIndex": 1.18,
+        "vehicleType": "32 ft container",
+        "routeSequence": [
+          "Chennai",
+          "Coimbatore"
+        ]
+      },
+      "createdAt": "2026-05-05T14:00:00.000Z",
+      "checkpoints": [
+        {
+          "label": "Booked Chennai to Coimbatore",
+          "time": "2026-05-05 14:00"
+        },
+        {
+          "label": "Awaiting dispatch",
+          "time": "2026-05-05 15:00"
+        }
+      ]
+    },
+    {
+      "id": "SHP-2605-005",
+      "customerId": "CUST-005",
+      "customer": "Coastal Electronics",
+      "origin": "Ahmedabad",
+      "destination": "Surat",
+      "status": "Delivered",
+      "priority": "Normal",
+      "eta": "2026-05-04T16:30",
+      "vehicleId": "GJ05-LX-4409",
+      "weightKg": 3000,
+      "volumeCbm": 8.8,
+      "revenue": 18800,
+      "progress": 100,
+      "distanceKm": 245,
+      "route": {
+        "available": true,
+        "origin": {
+          "city": "Ahmedabad",
+          "lat": 23.0225,
+          "lng": 72.5714,
+          "region": "West"
+        },
+        "destination": {
+          "city": "Surat",
+          "lat": 21.1702,
+          "lng": 72.8311,
+          "region": "West"
+        },
+        "stops": [],
+        "distanceKm": 245,
+        "durationHours": 6.5,
+        "eta": "2026-05-04T16:30",
+        "trafficIndex": 1,
+        "vehicleType": "32 ft container",
+        "routeSequence": [
+          "Ahmedabad",
+          "Surat"
+        ]
+      },
+      "createdAt": "2026-05-04T10:00:00.000Z",
+      "checkpoints": [
+        {
+          "label": "Booked Ahmedabad to Surat",
+          "time": "2026-05-04 10:00"
+        },
+        {
+          "label": "Status: Delivered",
+          "time": "2026-05-04 11:00"
+        }
+      ]
+    },
+    {
+      "id": "SHP-2605-006",
+      "customerId": "CUST-006",
+      "customer": "BluePeak Auto",
+      "origin": "Nagpur",
+      "destination": "Indore",
+      "status": "Booked",
+      "priority": "High",
+      "eta": "2026-05-06T04:24",
+      "vehicleId": "KA03-LX-1882",
+      "weightKg": 7600,
+      "volumeCbm": 22.4,
+      "revenue": 33800,
+      "progress": 12,
+      "distanceKm": 444,
+      "route": {
+        "available": true,
+        "origin": {
+          "city": "Nagpur",
+          "lat": 21.1458,
+          "lng": 79.0882,
+          "region": "Central"
+        },
+        "destination": {
+          "city": "Indore",
+          "lat": 22.7196,
+          "lng": 75.8577,
+          "region": "Central"
+        },
+        "stops": [],
+        "distanceKm": 444,
+        "durationHours": 13.4,
+        "eta": "2026-05-06T04:24",
+        "trafficIndex": 1.18,
+        "vehicleType": "32 ft container",
+        "routeSequence": [
+          "Nagpur",
+          "Indore"
+        ]
+      },
+      "createdAt": "2026-05-05T15:00:00.000Z",
+      "checkpoints": [
+        {
+          "label": "Booked Nagpur to Indore",
+          "time": "2026-05-05 15:00"
+        },
+        {
+          "label": "Awaiting dispatch",
+          "time": "2026-05-05 16:00"
+        }
+      ]
+    },
+    {
+      "id": "SHP-2605-007",
+      "customerId": "CUST-007",
+      "customer": "QuickBasket",
+      "origin": "Kolkata",
+      "destination": "Lucknow",
+      "status": "In Transit",
+      "priority": "Normal",
+      "eta": "2026-05-06T09:12",
+      "vehicleId": "DL01-LX-7710",
+      "weightKg": 5400,
+      "volumeCbm": 15.9,
+      "revenue": 41200,
+      "progress": 46,
+      "distanceKm": 1047,
+      "route": {
+        "available": true,
+        "origin": {
+          "city": "Kolkata",
+          "lat": 22.5726,
+          "lng": 88.3639,
+          "region": "East"
+        },
+        "destination": {
+          "city": "Lucknow",
+          "lat": 26.8467,
+          "lng": 80.9462,
+          "region": "North"
+        },
+        "stops": [],
+        "distanceKm": 1047,
+        "durationHours": 25.2,
+        "eta": "2026-05-06T09:12",
+        "trafficIndex": 1.06,
+        "vehicleType": "32 ft container",
+        "routeSequence": [
+          "Kolkata",
+          "Lucknow"
+        ]
+      },
+      "createdAt": "2026-05-05T08:00:00.000Z",
+      "checkpoints": [
+        {
+          "label": "Booked Kolkata to Lucknow",
+          "time": "2026-05-05 08:00"
+        },
+        {
+          "label": "Status: In Transit",
+          "time": "2026-05-05 09:00"
+        }
+      ]
+    }
+  ],
+  "warehouses": [
+    {
+      "id": "WH-MUM",
+      "name": "Mumbai Fulfillment Hub",
+      "city": "Mumbai",
+      "utilization": 82,
+      "status": "Open"
+    },
+    {
+      "id": "WH-BLR",
+      "name": "Bengaluru Cold Chain DC",
+      "city": "Bengaluru",
+      "utilization": 76,
+      "status": "Open"
+    },
+    {
+      "id": "WH-DEL",
+      "name": "Delhi North Hub",
+      "city": "Delhi",
+      "utilization": 88,
+      "status": "Congested"
+    },
+    {
+      "id": "WH-CHE",
+      "name": "Chennai South Yard",
+      "city": "Chennai",
+      "utilization": 61,
+      "status": "Open"
+    }
+  ],
+  "inventory": [
+    {
+      "id": "INVITEM-1-1",
+      "sku": "GRO-100",
+      "category": "Grocery",
+      "warehouseId": "WH-MUM",
+      "name": "Grocery stock",
+      "quantityAvailable": 84,
+      "quantityReserved": 134,
+      "binLocation": "A-3-18"
+    },
+    {
+      "id": "INVITEM-1-2",
+      "sku": "GRO-110",
+      "category": "Grocery",
+      "warehouseId": "WH-BLR",
+      "name": "Grocery stock",
+      "quantityAvailable": 785,
+      "quantityReserved": 70,
+      "binLocation": "B-3-10"
+    },
+    {
+      "id": "INVITEM-1-3",
+      "sku": "GRO-120",
+      "category": "Grocery",
+      "warehouseId": "WH-DEL",
+      "name": "Grocery stock",
+      "quantityAvailable": 662,
+      "quantityReserved": 87,
+      "binLocation": "C-3-15"
+    },
+    {
+      "id": "INVITEM-1-4",
+      "sku": "GRO-130",
+      "category": "Grocery",
+      "warehouseId": "WH-CHE",
+      "name": "Grocery stock",
+      "quantityAvailable": 263,
+      "quantityReserved": 102,
+      "binLocation": "D-3-4"
+    },
+    {
+      "id": "INVITEM-2-1",
+      "sku": "PHA-101",
+      "category": "Pharma",
+      "warehouseId": "WH-MUM",
+      "name": "Pharma stock",
+      "quantityAvailable": 91,
+      "quantityReserved": 31,
+      "binLocation": "A-4-8"
+    },
+    {
+      "id": "INVITEM-2-2",
+      "sku": "PHA-111",
+      "category": "Pharma",
+      "warehouseId": "WH-BLR",
+      "name": "Pharma stock",
+      "quantityAvailable": 617,
+      "quantityReserved": 31,
+      "binLocation": "B-4-1"
+    },
+    {
+      "id": "INVITEM-2-3",
+      "sku": "PHA-121",
+      "category": "Pharma",
+      "warehouseId": "WH-DEL",
+      "name": "Pharma stock",
+      "quantityAvailable": 451,
+      "quantityReserved": 199,
+      "binLocation": "C-4-7"
+    },
+    {
+      "id": "INVITEM-2-4",
+      "sku": "PHA-131",
+      "category": "Pharma",
+      "warehouseId": "WH-CHE",
+      "name": "Pharma stock",
+      "quantityAvailable": 709,
+      "quantityReserved": 93,
+      "binLocation": "D-4-7"
+    },
+    {
+      "id": "INVITEM-3-1",
+      "sku": "CON-102",
+      "category": "Construction",
+      "warehouseId": "WH-MUM",
+      "name": "Construction stock",
+      "quantityAvailable": 720,
+      "quantityReserved": 62,
+      "binLocation": "A-5-15"
+    },
+    {
+      "id": "INVITEM-3-2",
+      "sku": "CON-112",
+      "category": "Construction",
+      "warehouseId": "WH-BLR",
+      "name": "Construction stock",
+      "quantityAvailable": 629,
+      "quantityReserved": 141,
+      "binLocation": "B-5-6"
+    },
+    {
+      "id": "INVITEM-3-3",
+      "sku": "CON-122",
+      "category": "Construction",
+      "warehouseId": "WH-DEL",
+      "name": "Construction stock",
+      "quantityAvailable": 650,
+      "quantityReserved": 74,
+      "binLocation": "C-5-5"
+    },
+    {
+      "id": "INVITEM-3-4",
+      "sku": "CON-132",
+      "category": "Construction",
+      "warehouseId": "WH-CHE",
+      "name": "Construction stock",
+      "quantityAvailable": 190,
+      "quantityReserved": 20,
+      "binLocation": "D-5-9"
+    },
+    {
+      "id": "INVITEM-4-1",
+      "sku": "APP-103",
+      "category": "Apparel",
+      "warehouseId": "WH-MUM",
+      "name": "Apparel stock",
+      "quantityAvailable": 423,
+      "quantityReserved": 135,
+      "binLocation": "A-6-1"
+    },
+    {
+      "id": "INVITEM-4-2",
+      "sku": "APP-113",
+      "category": "Apparel",
+      "warehouseId": "WH-BLR",
+      "name": "Apparel stock",
+      "quantityAvailable": 446,
+      "quantityReserved": 98,
+      "binLocation": "B-6-14"
+    },
+    {
+      "id": "INVITEM-4-3",
+      "sku": "APP-123",
+      "category": "Apparel",
+      "warehouseId": "WH-DEL",
+      "name": "Apparel stock",
+      "quantityAvailable": 376,
+      "quantityReserved": 87,
+      "binLocation": "C-6-15"
+    },
+    {
+      "id": "INVITEM-4-4",
+      "sku": "APP-133",
+      "category": "Apparel",
+      "warehouseId": "WH-CHE",
+      "name": "Apparel stock",
+      "quantityAvailable": 705,
+      "quantityReserved": 131,
+      "binLocation": "D-6-6"
+    },
+    {
+      "id": "INVITEM-5-1",
+      "sku": "ELE-104",
+      "category": "Electronics",
+      "warehouseId": "WH-MUM",
+      "name": "Electronics stock",
+      "quantityAvailable": 268,
+      "quantityReserved": 75,
+      "binLocation": "A-7-7"
+    },
+    {
+      "id": "INVITEM-5-2",
+      "sku": "ELE-114",
+      "category": "Electronics",
+      "warehouseId": "WH-BLR",
+      "name": "Electronics stock",
+      "quantityAvailable": 624,
+      "quantityReserved": 52,
+      "binLocation": "B-7-9"
+    },
+    {
+      "id": "INVITEM-5-3",
+      "sku": "ELE-124",
+      "category": "Electronics",
+      "warehouseId": "WH-DEL",
+      "name": "Electronics stock",
+      "quantityAvailable": 543,
+      "quantityReserved": 98,
+      "binLocation": "C-7-6"
+    },
+    {
+      "id": "INVITEM-5-4",
+      "sku": "ELE-134",
+      "category": "Electronics",
+      "warehouseId": "WH-CHE",
+      "name": "Electronics stock",
+      "quantityAvailable": 170,
+      "quantityReserved": 142,
+      "binLocation": "D-7-12"
+    },
+    {
+      "id": "INVITEM-6-1",
+      "sku": "AUT-105",
+      "category": "Auto Parts",
+      "warehouseId": "WH-MUM",
+      "name": "Auto Parts stock",
+      "quantityAvailable": 332,
+      "quantityReserved": 78,
+      "binLocation": "A-8-13"
+    },
+    {
+      "id": "INVITEM-6-2",
+      "sku": "AUT-115",
+      "category": "Auto Parts",
+      "warehouseId": "WH-BLR",
+      "name": "Auto Parts stock",
+      "quantityAvailable": 108,
+      "quantityReserved": 172,
+      "binLocation": "B-8-11"
+    },
+    {
+      "id": "INVITEM-6-3",
+      "sku": "AUT-125",
+      "category": "Auto Parts",
+      "warehouseId": "WH-DEL",
+      "name": "Auto Parts stock",
+      "quantityAvailable": 82,
+      "quantityReserved": 179,
+      "binLocation": "C-8-3"
+    },
+    {
+      "id": "INVITEM-6-4",
+      "sku": "AUT-135",
+      "category": "Auto Parts",
+      "warehouseId": "WH-CHE",
+      "name": "Auto Parts stock",
+      "quantityAvailable": 718,
+      "quantityReserved": 61,
+      "binLocation": "D-8-15"
+    },
+    {
+      "id": "INVITEM-7-1",
+      "sku": "HOM-106",
+      "category": "Home Goods",
+      "warehouseId": "WH-MUM",
+      "name": "Home Goods stock",
+      "quantityAvailable": 791,
+      "quantityReserved": 144,
+      "binLocation": "A-9-7"
+    },
+    {
+      "id": "INVITEM-7-2",
+      "sku": "HOM-116",
+      "category": "Home Goods",
+      "warehouseId": "WH-BLR",
+      "name": "Home Goods stock",
+      "quantityAvailable": 170,
+      "quantityReserved": 113,
+      "binLocation": "B-9-7"
+    },
+    {
+      "id": "INVITEM-7-3",
+      "sku": "HOM-126",
+      "category": "Home Goods",
+      "warehouseId": "WH-DEL",
+      "name": "Home Goods stock",
+      "quantityAvailable": 89,
+      "quantityReserved": 137,
+      "binLocation": "C-9-10"
+    },
+    {
+      "id": "INVITEM-7-4",
+      "sku": "HOM-136",
+      "category": "Home Goods",
+      "warehouseId": "WH-CHE",
+      "name": "Home Goods stock",
+      "quantityAvailable": 335,
+      "quantityReserved": 42,
+      "binLocation": "D-9-6"
+    }
+  ],
+  "invoices": [
+    {
+      "id": "INV-2605-001",
+      "shipmentId": "SHP-2605-001",
+      "customerId": "CUST-001",
+      "subtotal": 44620,
+      "tax": 3880,
+      "total": 48500,
+      "status": "Draft",
+      "dueAt": "2026-05-19"
+    },
+    {
+      "id": "INV-2605-002",
+      "shipmentId": "SHP-2605-002",
+      "customerId": "CUST-002",
+      "subtotal": 66240,
+      "tax": 5760,
+      "total": 72000,
+      "status": "Draft",
+      "dueAt": "2026-05-20"
+    },
+    {
+      "id": "INV-2605-003",
+      "shipmentId": "SHP-2605-003",
+      "customerId": "CUST-003",
+      "subtotal": 35972,
+      "tax": 3128,
+      "total": 39100,
+      "status": "Draft",
+      "dueAt": "2026-05-21"
+    },
+    {
+      "id": "INV-2605-004",
+      "shipmentId": "SHP-2605-004",
+      "customerId": "CUST-004",
+      "subtotal": 25392,
+      "tax": 2208,
+      "total": 27600,
+      "status": "Draft",
+      "dueAt": "2026-05-22"
+    },
+    {
+      "id": "INV-2605-005",
+      "shipmentId": "SHP-2605-005",
+      "customerId": "CUST-005",
+      "subtotal": 17296,
+      "tax": 1504,
+      "total": 18800,
+      "status": "Ready",
+      "dueAt": "2026-05-23"
+    },
+    {
+      "id": "INV-2605-006",
+      "shipmentId": "SHP-2605-006",
+      "customerId": "CUST-006",
+      "subtotal": 31096,
+      "tax": 2704,
+      "total": 33800,
+      "status": "Draft",
+      "dueAt": "2026-05-24"
+    },
+    {
+      "id": "INV-2605-007",
+      "shipmentId": "SHP-2605-007",
+      "customerId": "CUST-007",
+      "subtotal": 37904,
+      "tax": 3296,
+      "total": 41200,
+      "status": "Draft",
+      "dueAt": "2026-05-25"
+    }
+  ],
+  "notifications": [
+    {
+      "id": "NTF-2605-001",
+      "shipmentId": "SHP-2605-001",
+      "customerId": "CUST-001",
+      "channel": "WhatsApp",
+      "message": "SHP-2605-001 is In Transit on Mumbai to Pune.",
+      "status": "Queued",
+      "createdAt": "2026-05-05T16:00:00.000Z"
+    },
+    {
+      "id": "NTF-2605-002",
+      "shipmentId": "SHP-2605-002",
+      "customerId": "CUST-002",
+      "channel": "Email",
+      "message": "SHP-2605-002 is Dispatched on Bengaluru to Hyderabad.",
+      "status": "Queued",
+      "createdAt": "2026-05-05T15:00:00.000Z"
+    },
+    {
+      "id": "NTF-2605-003",
+      "shipmentId": "SHP-2605-003",
+      "customerId": "CUST-003",
+      "channel": "WhatsApp",
+      "message": "SHP-2605-003 is Delayed on Delhi to Jaipur.",
+      "status": "Queued",
+      "createdAt": "2026-05-05T14:00:00.000Z"
+    },
+    {
+      "id": "NTF-2605-004",
+      "shipmentId": "SHP-2605-004",
+      "customerId": "CUST-004",
+      "channel": "Email",
+      "message": "SHP-2605-004 is Booked on Chennai to Coimbatore.",
+      "status": "Queued",
+      "createdAt": "2026-05-05T13:00:00.000Z"
+    },
+    {
+      "id": "NTF-2605-005",
+      "shipmentId": "SHP-2605-005",
+      "customerId": "CUST-005",
+      "channel": "WhatsApp",
+      "message": "SHP-2605-005 is Delivered on Ahmedabad to Surat.",
+      "status": "Queued",
+      "createdAt": "2026-05-05T12:00:00.000Z"
+    }
+  ],
+  "incidents": [],
+  "pods": []
+}

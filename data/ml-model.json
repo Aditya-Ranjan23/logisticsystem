@@ -1,0 +1,288 @@
+{
+  "version": "synthetic-logistics-v1",
+  "trainedAt": "2026-05-05T16:25:36.367Z",
+  "recordCount": 12000,
+  "features": [
+    "distanceKm",
+    "weightTons",
+    "volumeCbm",
+    "priorityScore",
+    "trafficIndex",
+    "warehouseDwellHours",
+    "departureHour"
+  ],
+  "means": [
+    1083.3358,
+    8.1085,
+    22.0142,
+    1.6778,
+    1.108,
+    3.6627,
+    11.4426
+  ],
+  "stds": [
+    580.8463,
+    4.5896,
+    13.3211,
+    0.7476,
+    0.1353,
+    1.505,
+    6.9084
+  ],
+  "coefficients": [
+    31.4659,
+    14.7371,
+    -0.141,
+    0.1232,
+    -1.9856,
+    3.3204,
+    1.4859,
+    0.0148
+  ],
+  "metrics": {
+    "maeHours": 2.6,
+    "rmseHours": 3.39
+  },
+  "demand": {
+    "lanes": [
+      {
+        "lane": "Nashik to Surat",
+        "orders": 48
+      },
+      {
+        "lane": "Indore to Surat",
+        "orders": 45
+      },
+      {
+        "lane": "Indore to Mumbai",
+        "orders": 42
+      },
+      {
+        "lane": "Bengaluru to Kochi",
+        "orders": 40
+      },
+      {
+        "lane": "Coimbatore to Goa",
+        "orders": 40
+      },
+      {
+        "lane": "Jaipur to Vadodara",
+        "orders": 40
+      },
+      {
+        "lane": "Goa to Kochi",
+        "orders": 40
+      },
+      {
+        "lane": "Mumbai to Nashik",
+        "orders": 39
+      },
+      {
+        "lane": "Bhopal to Noida",
+        "orders": 39
+      },
+      {
+        "lane": "Kochi to Ahmedabad",
+        "orders": 39
+      },
+      {
+        "lane": "Noida to Coimbatore",
+        "orders": 38
+      },
+      {
+        "lane": "Pune to Chennai",
+        "orders": 38
+      },
+      {
+        "lane": "Coimbatore to Pune",
+        "orders": 38
+      },
+      {
+        "lane": "Delhi to Bhopal",
+        "orders": 38
+      },
+      {
+        "lane": "Pune to Ahmedabad",
+        "orders": 37
+      },
+      {
+        "lane": "Vadodara to Coimbatore",
+        "orders": 37
+      },
+      {
+        "lane": "Nagpur to Gurugram",
+        "orders": 37
+      },
+      {
+        "lane": "Kolkata to Goa",
+        "orders": 37
+      },
+      {
+        "lane": "Bhopal to Jaipur",
+        "orders": 37
+      },
+      {
+        "lane": "Hyderabad to Indore",
+        "orders": 37
+      }
+    ],
+    "cities": [
+      {
+        "city": "Surat",
+        "orders": 622
+      },
+      {
+        "city": "Ahmedabad",
+        "orders": 604
+      },
+      {
+        "city": "Bengaluru",
+        "orders": 602
+      },
+      {
+        "city": "Coimbatore",
+        "orders": 601
+      },
+      {
+        "city": "Jaipur",
+        "orders": 599
+      },
+      {
+        "city": "Mumbai",
+        "orders": 588
+      },
+      {
+        "city": "Pune",
+        "orders": 581
+      },
+      {
+        "city": "Indore",
+        "orders": 581
+      },
+      {
+        "city": "Goa",
+        "orders": 578
+      },
+      {
+        "city": "Chennai",
+        "orders": 572
+      },
+      {
+        "city": "Vadodara",
+        "orders": 564
+      },
+      {
+        "city": "Kochi",
+        "orders": 561
+      },
+      {
+        "city": "Gurugram",
+        "orders": 561
+      },
+      {
+        "city": "Nashik",
+        "orders": 560
+      },
+      {
+        "city": "Nagpur",
+        "orders": 557
+      },
+      {
+        "city": "Lucknow",
+        "orders": 557
+      },
+      {
+        "city": "Kolkata",
+        "orders": 547
+      },
+      {
+        "city": "Bhopal",
+        "orders": 546
+      },
+      {
+        "city": "Delhi",
+        "orders": 543
+      },
+      {
+        "city": "Noida",
+        "orders": 542
+      }
+    ],
+    "byDayOfWeek": [
+      {
+        "dayOfWeek": 0,
+        "avgOrders": 66.49
+      },
+      {
+        "dayOfWeek": 1,
+        "avgOrders": 68.71
+      },
+      {
+        "dayOfWeek": 2,
+        "avgOrders": 68.71
+      },
+      {
+        "dayOfWeek": 3,
+        "avgOrders": 69.64
+      },
+      {
+        "dayOfWeek": 4,
+        "avgOrders": 68.67
+      },
+      {
+        "dayOfWeek": 5,
+        "avgOrders": 71.5
+      },
+      {
+        "dayOfWeek": 6,
+        "avgOrders": 71.3
+      }
+    ]
+  },
+  "anomaly": {
+    "revenuePerKm": {
+      "mean": 115.2258,
+      "std": 93.8115
+    },
+    "delayRatio": {
+      "mean": 0.9014,
+      "std": 0.1386
+    },
+    "weightDistanceRatio": {
+      "mean": 14.7382,
+      "std": 38.3815
+    }
+  },
+  "warehouse": {
+    "categoryVelocity": [
+      {
+        "category": "Grocery",
+        "dailyOrders": 3.65
+      },
+      {
+        "category": "Electronics",
+        "dailyOrders": 3.58
+      },
+      {
+        "category": "Auto Parts",
+        "dailyOrders": 3.53
+      },
+      {
+        "category": "Construction",
+        "dailyOrders": 3.52
+      },
+      {
+        "category": "Home Goods",
+        "dailyOrders": 3.52
+      },
+      {
+        "category": "Pharma",
+        "dailyOrders": 3.48
+      },
+      {
+        "category": "Apparel",
+        "dailyOrders": 3.46
+      }
+    ]
+  }
+}

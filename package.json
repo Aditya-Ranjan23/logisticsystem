@@ -1,0 +1,16 @@
+{
+  "name": "logixops",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Logistics control tower MVP with optional Mistral AI dispatch planning.",
+  "scripts": {
+    "seed": "node scripts/generate-sample-data.js",
+    "train": "node scripts/train-ml-model.js",
+    "prepare:data": "npm run seed && npm run train",
+    "start": "node server.js",
+    "check": "node --check app.js && node --check server.js && node --check services/geo.js && node --check services/ml.js && node --check scripts/generate-sample-data.js && node --check scripts/train-ml-model.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
